@@ -1,0 +1,9447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>yourr-ikyy | Internet Corner</title>
+
+  <meta
+    name="description"
+    content="yourr-ikyy's personal internet corner."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+<style>
+
+    /* =========================================================
+   YOURR-IKYY INTERNET CORNER
+   FRUTIGER AERO / GLOSSY WEB / PERSONAL HOMEPAGE
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+  --sky-top: #38cfff;
+  --sky-mid: #91e8ff;
+  --sky-bottom: #dcf9ff;
+
+  --blue: #079fe2;
+  --blue-dark: #0572b8;
+  --blue-light: #72e5ff;
+
+  --cyan: #13cce9;
+
+  --green: #58c948;
+  --green-dark: #258b2e;
+
+  --yellow: #ffe86b;
+
+  --text: #16516b;
+  --text-light: #4c7c90;
+
+  --white: #ffffff;
+
+  --glass: rgba(255,255,255,.67);
+  --glass-heavy: rgba(255,255,255,.84);
+
+  --border:
+    rgba(255,255,255,.94);
+
+  --shadow:
+    0 18px 45px rgba(0,85,130,.16),
+    0 5px 12px rgba(0,85,130,.10);
+
+  --shadow-small:
+    0 8px 20px rgba(0,85,130,.13);
+
+  --radius:
+    24px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+  box-sizing:
+    border-box;
+
+}
+
+
+html {
+
+  scroll-behavior:
+    smooth;
+
+}
+
+
+body {
+
+  margin:
+    0;
+
+  font-family:
+    "Nunito",
+    Arial,
+    sans-serif;
+
+  color:
+    var(--text);
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--sky-top),
+      var(--sky-mid) 28%,
+      var(--sky-bottom) 62%,
+      #9bdda1
+    );
+
+  overflow-x:
+    hidden;
+
+}
+
+
+a {
+
+  color:
+    inherit;
+
+}
+
+
+button,
+a {
+
+  -webkit-tap-highlight-color:
+    transparent;
+
+}
+
+
+button {
+
+  font-family:
+    inherit;
+
+}
+
+
+/* =========================================================
+   GLOBAL BACKGROUND
+========================================================= */
+
+.page-background {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    -20;
+
+  overflow:
+    hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--sky-top) 0%,
+      var(--sky-mid) 45%,
+      var(--sky-bottom) 100%
+    );
+
+}
+
+
+.bg-sun {
+
+  position:
+    absolute;
+
+  width:
+    190px;
+
+  height:
+    190px;
+
+  top:
+    8%;
+
+  right:
+    12%;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #fffdd4,
+      #fff18a 46%,
+      #ffd631 72%,
+      #ffc000
+    );
+
+  box-shadow:
+    0 0 40px #fff5a5,
+    0 0 100px rgba(255,232,95,.7);
+
+}
+
+
+.bg-cloud {
+
+  position:
+    absolute;
+
+  width:
+    260px;
+
+  height:
+    70px;
+
+  border-radius:
+    100px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.98),
+      rgba(220,248,255,.82)
+    );
+
+  box-shadow:
+    inset 0 8px 15px rgba(255,255,255,.9),
+    0 18px 28px rgba(0,100,150,.10);
+
+}
+
+
+.bg-cloud > div {
+
+  position:
+    absolute;
+
+  bottom:
+    18px;
+
+  border-radius:
+    50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #ddf8ff
+    );
+
+}
+
+
+.bg-cloud > div:nth-child(1) {
+
+  width:
+    90px;
+
+  height:
+    90px;
+
+  left:
+    30px;
+
+}
+
+
+.bg-cloud > div:nth-child(2) {
+
+  width:
+    115px;
+
+  height:
+    115px;
+
+  left:
+    90px;
+
+  bottom:
+    12px;
+
+}
+
+
+.bg-cloud > div:nth-child(3) {
+
+  width:
+    80px;
+
+  height:
+    80px;
+
+  right:
+    20px;
+
+}
+
+
+.cloud-one {
+
+  left:
+    -80px;
+
+  top:
+    12%;
+
+  animation:
+    cloudFloat 45s linear infinite;
+
+}
+
+
+.cloud-two {
+
+  right:
+    -100px;
+
+  top:
+    34%;
+
+  transform:
+    scale(.72);
+
+  animation:
+    cloudFloatReverse 58s linear infinite;
+
+}
+
+
+.cloud-three {
+
+  left:
+    35%;
+
+  top:
+    51%;
+
+  transform:
+    scale(.4);
+
+  opacity:
+    .48;
+
+}
+
+
+@keyframes cloudFloat {
+
+  from {
+    transform:
+      translateX(-100px);
+  }
+
+  to {
+    transform:
+      translateX(calc(100vw + 400px));
+  }
+
+}
+
+
+@keyframes cloudFloatReverse {
+
+  from {
+    transform:
+      translateX(100px) scale(.72);
+  }
+
+  to {
+    transform:
+      translateX(calc(-100vw - 400px)) scale(.72);
+  }
+
+}
+
+
+.sky-speck {
+
+  position:
+    absolute;
+
+  border:
+    2px solid rgba(255,255,255,.7);
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.18);
+
+  animation:
+    floatSpeck 7s ease-in-out infinite;
+
+}
+
+
+.speck-one {
+
+  width:
+    20px;
+
+  height:
+    20px;
+
+  left:
+    12%;
+
+  top:
+    27%;
+
+}
+
+
+.speck-two {
+
+  width:
+    11px;
+
+  height:
+    11px;
+
+  left:
+    77%;
+
+  top:
+    48%;
+
+  animation-delay:
+    1s;
+
+}
+
+
+.speck-three {
+
+  width:
+    29px;
+
+  height:
+    29px;
+
+  left:
+    88%;
+
+  top:
+    18%;
+
+  animation-delay:
+    2s;
+
+}
+
+
+.speck-four {
+
+  width:
+    8px;
+
+  height:
+    8px;
+
+  left:
+    32%;
+
+  top:
+    65%;
+
+  animation-delay:
+    3s;
+
+}
+
+
+@keyframes floatSpeck {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-22px);
+  }
+
+}
+
+
+/* =========================================================
+   SITE WRAPPER
+========================================================= */
+
+.site-wrapper {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  overflow:
+    hidden;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+  position:
+    sticky;
+
+  top:
+    14px;
+
+  z-index:
+    1000;
+
+  width:
+    min(1220px, calc(100% - 30px));
+
+  margin:
+    14px auto 0;
+
+}
+
+
+.header-inner {
+
+  min-height:
+    68px;
+
+  padding:
+    9px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    14px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.92),
+      rgba(223,248,255,.68)
+    );
+
+  box-shadow:
+    var(--shadow);
+
+  backdrop-filter:
+    blur(18px);
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.site-brand {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    3px;
+
+  text-decoration:
+    none;
+
+}
+
+
+.brand-avatar {
+
+  position:
+    relative;
+
+  width:
+    46px;
+
+  height:
+    46px;
+
+  padding:
+    3px;
+
+  border-radius:
+    50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      white,
+      #4bd8ff
+    );
+
+  box-shadow:
+    0 6px 14px rgba(0,100,150,.17);
+
+}
+
+
+.brand-avatar img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  border-radius:
+    50%;
+
+}
+
+
+.avatar-shine {
+
+  position:
+    absolute;
+
+  top:
+    7px;
+
+  left:
+    10px;
+
+  width:
+    20px;
+
+  height:
+    8px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.75);
+
+  transform:
+    rotate(-18deg);
+
+}
+
+
+.brand-copy strong,
+.brand-copy span {
+
+  display:
+    block;
+
+}
+
+
+.brand-copy strong {
+
+  font-size:
+    15px;
+
+  line-height:
+    1;
+
+}
+
+
+.brand-copy span {
+
+  margin-top:
+    4px;
+
+  color:
+    var(--text-light);
+
+  font-size:
+    9px;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.main-navigation {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    4px;
+
+  margin:
+    auto;
+
+}
+
+
+.nav-link {
+
+  position:
+    relative;
+
+  padding:
+    11px 14px;
+
+  border-radius:
+    12px;
+
+  color:
+    #286d87;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  text-decoration:
+    none;
+
+  transition:
+    .18s ease;
+
+}
+
+
+.nav-link:hover {
+
+  color:
+    #075e87;
+
+  background:
+    rgba(255,255,255,.55);
+
+}
+
+
+.nav-link.active {
+
+  color:
+    #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #66ddff,
+      #079ad8
+    );
+
+  box-shadow:
+    inset 0 1px 0 white,
+    0 5px 12px rgba(0,100,160,.16);
+
+}
+
+
+.header-status {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  padding:
+    9px 12px;
+
+  border-radius:
+    14px;
+
+  color:
+    #2d8536;
+
+  background:
+    rgba(76,210,84,.12);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+}
+
+
+.status-pulse {
+
+  width:
+    8px;
+
+  height:
+    8px;
+
+  border-radius:
+    50%;
+
+  background:
+    #4bd74f;
+
+  box-shadow:
+    0 0 12px #4bd74f;
+
+  animation:
+    pulse 1.7s ease-in-out infinite;
+
+}
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform:
+      scale(1);
+  }
+
+  50% {
+    transform:
+      scale(1.35);
+  }
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+
+  width:
+    min(1220px, calc(100% - 30px));
+
+  min-height:
+    730px;
+
+  margin:
+    auto;
+
+  padding:
+    95px 0 80px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1.15fr .85fr;
+
+  gap:
+    70px;
+
+  align-items:
+    center;
+
+}
+
+
+.hero-left {
+
+  position:
+    relative;
+
+}
+
+
+.hero-badge {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    8px 13px;
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  border-radius:
+    100px;
+
+  color:
+    #297895;
+
+  background:
+    rgba(255,255,255,.55);
+
+  box-shadow:
+    var(--shadow-small);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .4px;
+
+}
+
+
+.badge-star {
+
+  color:
+    #ffffff;
+
+  text-shadow:
+    0 1px 3px rgba(0,100,150,.2);
+
+}
+
+
+.hero-title-wrap {
+
+  margin-top:
+    25px;
+
+}
+
+
+.hero-small-title {
+
+  color:
+    #237a99;
+
+  font-size:
+    14px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    2px;
+
+}
+
+
+.hero-title {
+
+  margin:
+    6px 0 0;
+
+  font-size:
+    clamp(58px, 8vw, 100px);
+
+  line-height:
+    .85;
+
+  letter-spacing:
+    -5px;
+
+  color:
+    #ffffff;
+
+  text-shadow:
+    0 4px 0 #4ca8c7,
+    0 9px 25px rgba(0,80,130,.2);
+
+}
+
+
+.hero-title span {
+
+  display:
+    block;
+
+  color:
+    #136383;
+
+  text-shadow:
+    0 3px 0 rgba(255,255,255,.8),
+    0 8px 18px rgba(0,90,130,.13);
+
+}
+
+
+.hero-description {
+
+  max-width:
+    650px;
+
+  margin:
+    30px 0 0;
+
+}
+
+
+.hero-description p {
+
+  margin:
+    0;
+
+  font-size:
+    19px;
+
+  line-height:
+    1.7;
+
+  font-weight:
+    700;
+
+}
+
+
+.hero-mini-line {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  margin:
+    18px 0 25px;
+
+  color:
+    #477f94;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+}
+
+
+.mini-line-dot {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  border-radius:
+    50%;
+
+  background:
+    #4dd657;
+
+  box-shadow:
+    0 0 8px #4dd657;
+
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-actions {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+
+}
+
+
+.aero-button {
+
+  position:
+    relative;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  min-height:
+    43px;
+
+  padding:
+    11px 16px;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid rgba(255,255,255,.96);
+
+  border-radius:
+    14px;
+
+  color:
+    #166181;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.7) 43%,
+      rgba(164,236,255,.55) 44%,
+      rgba(70,190,235,.64) 100%
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.96),
+    0 6px 12px rgba(0,90,140,.14);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  text-decoration:
+    none;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    filter .18s ease;
+
+}
+
+
+.aero-button::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    3px;
+
+  left:
+    8%;
+
+  width:
+    84%;
+
+  height:
+    31%;
+
+  border-radius:
+    100px;
+
+  background:
+    rgba(255,255,255,.72);
+
+}
+
+
+.aero-button:hover {
+
+  transform:
+    translateY(-3px);
+
+  filter:
+    brightness(1.03);
+
+  box-shadow:
+    inset 0 2px 0 white,
+    0 10px 18px rgba(0,90,140,.18);
+
+}
+
+
+.aero-button:active {
+
+  transform:
+    translateY(1px);
+
+}
+
+
+.aero-button.primary {
+
+  color:
+    #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #7ae6ff,
+      #119fda
+    );
+
+  text-shadow:
+    0 1px 2px rgba(0,80,130,.3);
+
+}
+
+
+.button-icon {
+
+  font-size:
+    14px;
+
+}
+
+
+/* =========================================================
+   HERO MICRO LINKS
+========================================================= */
+
+.hero-micro-links {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+
+  margin-top:
+    18px;
+
+  color:
+    #4b8196;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+}
+
+
+.hero-micro-links a {
+
+  text-decoration:
+    none;
+
+}
+
+
+.hero-micro-links a:hover {
+
+  color:
+    #057cb0;
+
+  text-decoration:
+    underline;
+
+}
+
+
+/* =========================================================
+   HERO PROFILE
+========================================================= */
+
+.hero-right {
+
+  position:
+    relative;
+
+}
+
+
+.aero-window {
+
+  border:
+    1px solid rgba(255,255,255,.96);
+
+  border-radius:
+    26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.9),
+      rgba(218,247,255,.64)
+    );
+
+  box-shadow:
+    var(--shadow);
+
+  backdrop-filter:
+    blur(16px);
+
+}
+
+
+.profile-window {
+
+  transform:
+    rotate(2deg);
+
+  transition:
+    .35s ease;
+
+}
+
+
+.profile-window:hover {
+
+  transform:
+    rotate(0deg)
+    translateY(-8px);
+
+}
+
+
+.window-bar {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    10px 12px;
+
+  border-radius:
+    25px 25px 0 0;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      180deg,
+      #74e5ff,
+      #139cd7
+    );
+
+  box-shadow:
+    inset 0 1px 0 white;
+
+}
+
+
+.window-title {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+}
+
+
+.window-dot {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  border-radius:
+    50%;
+
+  background:
+    #d8ffff;
+
+  box-shadow:
+    0 0 7px white;
+
+}
+
+
+.window-controls {
+
+  display:
+    flex;
+
+  gap:
+    4px;
+
+}
+
+
+.window-controls button {
+
+  width:
+    19px;
+
+  height:
+    19px;
+
+  padding:
+    0;
+
+  border:
+    1px solid rgba(255,255,255,.45);
+
+  border-radius:
+    50%;
+
+  color:
+    white;
+
+  background:
+    rgba(255,255,255,.22);
+
+  cursor:
+    pointer;
+
+  font-size:
+    10px;
+
+}
+
+
+.profile-content {
+
+  padding:
+    28px;
+
+}
+
+
+.profile-avatar-wrap {
+
+  position:
+    relative;
+
+  width:
+    max-content;
+
+  margin:
+    auto;
+
+}
+
+
+.profile-avatar-ring {
+
+  position:
+    relative;
+
+  width:
+    142px;
+
+  height:
+    142px;
+
+  padding:
+    5px;
+
+  border-radius:
+    50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #4fd9ff
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0,100,150,.18);
+
+}
+
+
+.profile-avatar-ring img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  border-radius:
+    50%;
+
+}
+
+
+.profile-avatar-gloss {
+
+  position:
+    absolute;
+
+  top:
+    14px;
+
+  left:
+    18px;
+
+  width:
+    45px;
+
+  height:
+    17px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.62);
+
+  transform:
+    rotate(-20deg);
+
+}
+
+
+.avatar-status {
+
+  position:
+    absolute;
+
+  right:
+    -12px;
+
+  bottom:
+    7px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  padding:
+    6px 9px;
+
+  border:
+    2px solid white;
+
+  border-radius:
+    100px;
+
+  color:
+    #278534;
+
+  background:
+    #edfff0;
+
+  box-shadow:
+    0 5px 12px rgba(0,90,130,.12);
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+}
+
+
+.avatar-status span {
+
+  width:
+    6px;
+
+  height:
+    6px;
+
+  border-radius:
+    50%;
+
+  background:
+    #4bd34d;
+
+}
+
+
+.profile-name {
+
+  margin:
+    18px 0 18px;
+
+  text-align:
+    center;
+
+}
+
+
+.profile-name h2 {
+
+  margin:
+    0;
+
+  font-size:
+    25px;
+
+}
+
+
+.profile-name p {
+
+  margin:
+    4px 0 0;
+
+  color:
+    var(--text-light);
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+}
+
+
+.profile-info-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:
+    8px;
+
+}
+
+
+.info-tile {
+
+  padding:
+    11px;
+
+  border:
+    1px solid rgba(255,255,255,.75);
+
+  border-radius:
+    13px;
+
+  background:
+    rgba(255,255,255,.48);
+
+}
+
+
+.info-tile span,
+.info-tile strong {
+
+  display:
+    block;
+
+}
+
+
+.info-tile span {
+
+  color:
+    #5d899a;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+}
+
+
+.info-tile strong {
+
+  margin-top:
+    3px;
+
+  color:
+    #176783;
+
+  font-size:
+    11px;
+
+}
+
+
+.profile-progress {
+
+  margin:
+    18px 0;
+
+}
+
+
+.progress-header {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  margin-bottom:
+    7px;
+
+  color:
+    #477e92;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+}
+
+
+.progress-track {
+
+  height:
+    9px;
+
+  padding:
+    2px;
+
+  border-radius:
+    100px;
+
+  background:
+    rgba(40,130,160,.13);
+
+}
+
+
+.progress-fill {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  border-radius:
+    inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5de0ff,
+      #5edc61
+    );
+
+  box-shadow:
+    0 0 8px rgba(60,210,120,.25);
+
+}
+
+
+.profile-footer {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  color:
+    #6291a2;
+
+  font-size:
+    8px;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   FLOATING STATUS
+========================================================= */
+
+.floating-status-card {
+
+  position:
+    absolute;
+
+  left:
+    -38px;
+
+  bottom:
+    25px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+
+  padding:
+    10px 13px;
+
+  border:
+    1px solid rgba(255,255,255,.92);
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,.76);
+
+  box-shadow:
+    var(--shadow-small);
+
+  backdrop-filter:
+    blur(10px);
+
+  animation:
+    floatingCard 4s ease-in-out infinite;
+
+}
+
+
+@keyframes floatingCard {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+
+}
+
+
+.floating-icon {
+
+  width:
+    31px;
+
+  height:
+    31px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    10px;
+
+  background:
+    #fff5a4;
+
+}
+
+
+.floating-status-card small,
+.floating-status-card strong {
+
+  display:
+    block;
+
+}
+
+
+.floating-status-card small {
+
+  color:
+    #66909f;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.floating-status-card strong {
+
+  font-size:
+    10px;
+
+}
+
+
+/* =========================================================
+   QUICK BAR
+========================================================= */
+
+.quick-bar {
+
+  width:
+    min(1120px, calc(100% - 30px));
+
+  margin:
+    0 auto 100px;
+
+  padding:
+    15px 20px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  border:
+    1px solid rgba(255,255,255,.92);
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(255,255,255,.62);
+
+  box-shadow:
+    var(--shadow-small);
+
+  backdrop-filter:
+    blur(15px);
+
+}
+
+
+.quick-item {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+
+}
+
+
+.quick-icon {
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    12px;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #68ddff,
+      #0795d3
+    );
+
+  box-shadow:
+    inset 0 1px 0 white;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+}
+
+
+.quick-item small,
+.quick-item strong {
+
+  display:
+    block;
+
+}
+
+
+.quick-item small {
+
+  color:
+    #6590a0;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.quick-item strong {
+
+  margin-top:
+    2px;
+
+  font-size:
+    10px;
+
+}
+
+
+.quick-divider {
+
+  width:
+    1px;
+
+  height:
+    28px;
+
+  background:
+    rgba(50,130,155,.15);
+
+}
+
+
+/* =========================================================
+   CONTENT SECTIONS
+========================================================= */
+
+.content-section {
+
+  width:
+    min(1220px, calc(100% - 30px));
+
+  margin:
+    100px auto;
+
+}
+
+
+.section-header {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    17px;
+
+  margin-bottom:
+    30px;
+
+}
+
+
+.section-number {
+
+  width:
+    53px;
+
+  height:
+    53px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  border-radius:
+    50%;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #63ddff,
+      #0589cf
+    );
+
+  box-shadow:
+    inset 0 2px 0 white,
+    0 8px 18px rgba(0,100,160,.15);
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+}
+
+
+.section-heading-copy > span {
+
+  color:
+    #3b8ca5;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    1.5px;
+
+}
+
+
+.section-heading-copy h2 {
+
+  margin:
+    4px 0 0;
+
+  color:
+    #175d77;
+
+  font-size:
+    34px;
+
+  line-height:
+    1;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-layout {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1.3fr .7fr;
+
+  gap:
+    18px;
+
+}
+
+
+.large-panel,
+.glass-panel {
+
+  border:
+    1px solid rgba(255,255,255,.94);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.85),
+      rgba(220,247,255,.62)
+    );
+
+  box-shadow:
+    var(--shadow);
+
+  backdrop-filter:
+    blur(14px);
+
+}
+
+
+.large-panel {
+
+  border-radius:
+    24px;
+
+  overflow:
+    hidden;
+
+}
+
+
+.panel-header {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    12px 17px;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      180deg,
+      #73e4ff,
+      #16a1d9
+    );
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+}
+
+
+.panel-file {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+}
+
+
+.panel-header.simple {
+
+  color:
+    #276c83;
+
+  background:
+    rgba(255,255,255,.42);
+
+  border-bottom:
+    1px solid rgba(40,130,160,.1);
+
+}
+
+
+.about-body {
+
+  padding:
+    24px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    28px 1fr;
+
+  column-gap:
+    12px;
+
+}
+
+
+.about-line-number {
+
+  color:
+    #68a1b2;
+
+  font-family:
+    monospace;
+
+  font-size:
+    10px;
+
+  text-align:
+    right;
+
+  padding-top:
+    5px;
+
+}
+
+
+.about-body p {
+
+  margin:
+    0 0 18px;
+
+  color:
+    #356e82;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.8;
+
+}
+
+
+.about-quote {
+
+  grid-column:
+    1 / -1;
+
+  margin-top:
+    8px;
+
+  padding:
+    17px;
+
+  border:
+    1px solid rgba(255,255,255,.8);
+
+  border-radius:
+    17px;
+
+  color:
+    #25809f;
+
+  background:
+    rgba(90,210,240,.12);
+
+  text-align:
+    center;
+
+  font-size:
+    15px;
+
+  font-weight:
+    900;
+
+}
+
+
+.quote-mark {
+
+  color:
+    #58c9e8;
+
+  font-size:
+    27px;
+
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.facts-card {
+
+  border-radius:
+    24px;
+
+  overflow:
+    hidden;
+
+}
+
+
+.fact-list {
+
+  padding:
+    10px 20px;
+
+}
+
+
+.fact-row {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    13px 0;
+
+  border-bottom:
+    1px dashed rgba(40,130,155,.16);
+
+  color:
+    #467789;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+}
+
+
+.fact-row:last-child {
+
+  border-bottom:
+    none;
+
+}
+
+
+.fact-number {
+
+  width:
+    24px;
+
+  height:
+    24px;
+
+  flex:
+    0 0 auto;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    50%;
+
+  color:
+    white;
+
+  background:
+    #4fc5e5;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.facts-bottom {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  margin:
+    10px 18px 18px;
+
+  padding:
+    11px;
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(65,210,90,.10);
+
+  color:
+    #388d43;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+}
+
+
+/* =========================================================
+   IDENTITY MINI
+========================================================= */
+
+.identity-mini-grid {
+
+  grid-column:
+    1 / -1;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:
+    12px;
+
+}
+
+
+.identity-card {
+
+  position:
+    relative;
+
+  min-height:
+    110px;
+
+  padding:
+    18px;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid rgba(255,255,255,.92);
+
+  border-radius:
+    19px;
+
+  background:
+    rgba(255,255,255,.59);
+
+  box-shadow:
+    var(--shadow-small);
+
+}
+
+
+.identity-card::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  right:
+    -30px;
+
+  bottom:
+    -35px;
+
+  width:
+    90px;
+
+  height:
+    90px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.25);
+
+}
+
+
+.identity-card > span {
+
+  display:
+    block;
+
+  color:
+    #1ca2d0;
+
+  font-size:
+    22px;
+
+}
+
+
+.identity-card small,
+.identity-card strong {
+
+  display:
+    block;
+
+}
+
+
+.identity-card small {
+
+  margin-top:
+    7px;
+
+  color:
+    #6490a0;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.identity-card strong {
+
+  margin-top:
+    2px;
+
+  font-size:
+    16px;
+
+}
+
+
+/* =========================================================
+   WHAT I DO
+========================================================= */
+
+.what-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:
+    15px;
+
+}
+
+
+.what-card {
+
+  display:
+    flex;
+
+  gap:
+    17px;
+
+  padding:
+    22px;
+
+  border:
+    1px solid rgba(255,255,255,.92);
+
+  border-radius:
+    22px;
+
+  background:
+    rgba(255,255,255,.64);
+
+  box-shadow:
+    var(--shadow-small);
+
+  transition:
+    .25s ease;
+
+}
+
+
+.what-card:hover {
+
+  transform:
+    translateY(-6px);
+
+}
+
+
+.what-icon {
+
+  width:
+    55px;
+
+  height:
+    55px;
+
+  flex:
+    0 0 auto;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    17px;
+
+  color:
+    white;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.8);
+
+  font-size:
+    17px;
+
+  font-weight:
+    900;
+
+}
+
+
+.what-icon.blue {
+
+  background:
+    linear-gradient(
+      145deg,
+      #6be2ff,
+      #0794d2
+    );
+
+}
+
+
+.what-icon.green {
+
+  background:
+    linear-gradient(
+      145deg,
+      #8be96d,
+      #43b63d
+    );
+
+}
+
+
+.what-icon.orange {
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffc46b,
+      #ed8a30
+    );
+
+}
+
+
+.what-icon.purple {
+
+  background:
+    linear-gradient(
+      145deg,
+      #b79cff,
+      #7662d8
+    );
+
+}
+
+
+.what-content > span {
+
+  color:
+    #62909f;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+}
+
+
+.what-content h3 {
+
+  margin:
+    4px 0 6px;
+
+  font-size:
+    17px;
+
+}
+
+
+.what-content p {
+
+  margin:
+    0;
+
+  color:
+    #557f8e;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.65;
+
+}
+
+
+.what-tags {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    5px;
+
+  margin-top:
+    12px;
+
+}
+
+
+.what-tags span {
+
+  padding:
+    4px 7px;
+
+  border-radius:
+    8px;
+
+  color:
+    #3d8299;
+
+  background:
+    rgba(70,190,220,.1);
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+/* =========================================================
+   TOOLBOX
+========================================================= */
+
+.toolbox-board {
+
+  border:
+    1px solid rgba(255,255,255,.95);
+
+  border-radius:
+    25px;
+
+  background:
+    rgba(255,255,255,.64);
+
+  box-shadow:
+    var(--shadow);
+
+  overflow:
+    hidden;
+
+}
+
+
+.toolbox-top {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  padding:
+    17px 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.9),
+      rgba(222,248,255,.65)
+    );
+
+  border-bottom:
+    1px solid rgba(50,140,160,.12);
+
+}
+
+
+.toolbox-top span,
+.toolbox-top strong {
+
+  display:
+    block;
+
+}
+
+
+.toolbox-top span {
+
+  color:
+    #6a96a5;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+}
+
+
+.toolbox-top strong {
+
+  margin-top:
+    3px;
+
+  color:
+    #1b6982;
+
+  font-size:
+    13px;
+
+}
+
+
+.toolbox-status {
+
+  display:
+    flex !important;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    7px 9px;
+
+  border-radius:
+    10px;
+
+  color:
+    #318b3d;
+
+  background:
+    rgba(80,210,90,.1);
+
+  font-size:
+    8px !important;
+
+}
+
+
+.toolbox-status span {
+
+  width:
+    6px;
+
+  height:
+    6px;
+
+  border-radius:
+    50%;
+
+  background:
+    #48d14e;
+
+}
+
+
+.tool-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:
+    10px;
+
+  padding:
+    17px;
+
+}
+
+
+.tool-card {
+
+  position:
+    relative;
+
+  min-height:
+    110px;
+
+  padding:
+    14px;
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,.59);
+
+  overflow:
+    hidden;
+
+  transition:
+    .2s ease;
+
+}
+
+
+.tool-card:hover {
+
+  transform:
+    translateY(-5px)
+    scale(1.015);
+
+}
+
+
+.tool-logo {
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    11px;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #65dcff,
+      #078dca
+    );
+
+  box-shadow:
+    inset 0 1px 0 white;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+}
+
+
+.tool-text {
+
+  margin-top:
+    12px;
+
+}
+
+
+.tool-text strong,
+.tool-text span {
+
+  display:
+    block;
+
+}
+
+
+.tool-text strong {
+
+  font-size:
+    12px;
+
+}
+
+
+.tool-text span {
+
+  margin-top:
+    2px;
+
+  color:
+    #69909e;
+
+  font-size:
+    8px;
+
+}
+
+
+.tool-level {
+
+  position:
+    absolute;
+
+  right:
+    10px;
+
+  top:
+    10px;
+
+  color:
+    #66a0af;
+
+  font-size:
+    6px;
+
+  font-weight:
+    900;
+
+}
+
+
+.tool-html .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff916c,
+      #ef4f2d
+    );
+
+}
+
+
+.tool-css .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #63b9ff,
+      #2579df
+    );
+
+}
+
+
+.tool-js .tool-logo {
+
+  color:
+    #6b5c00;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff06e,
+      #e8c62c
+    );
+
+}
+
+
+.tool-react .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #63e7ff,
+      #159fd0
+    );
+
+}
+
+
+.tool-next .tool-logo,
+.tool-three .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #606b70,
+      #161a1d
+    );
+
+}
+
+
+.tool-gsap .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #9bea73,
+      #45b33e
+    );
+
+}
+
+
+.tool-arduino .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #56e0d7,
+      #159d9b
+    );
+
+}
+
+
+.tool-autocad .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff7c7c,
+      #d83c4d
+    );
+
+}
+
+
+.tool-tinker .tool-logo {
+
+  background:
+    linear-gradient(
+      145deg,
+      #6ddaff,
+      #3e92d4
+    );
+
+}
+
+
+.toolbox-bottom {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  padding:
+    12px 18px;
+
+  border-top:
+    1px solid rgba(40,130,160,.10);
+
+  color:
+    #6b95a3;
+
+  font-size:
+    8px;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects-board {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:
+    16px;
+
+}
+
+
+.project-item {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  min-height:
+    300px;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid rgba(255,255,255,.95);
+
+  border-radius:
+    23px;
+
+  background:
+    rgba(255,255,255,.68);
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    .25s ease;
+
+}
+
+
+.project-item:hover {
+
+  transform:
+    translateY(-7px);
+
+}
+
+
+.project-featured {
+
+  grid-column:
+    1 / -1;
+
+  grid-template-columns:
+    1fr 1fr;
+
+}
+
+
+.project-visual {
+
+  position:
+    relative;
+
+  min-height:
+    100%;
+
+  overflow:
+    hidden;
+
+}
+
+
+.webrng-visual {
+
+  background:
+    radial-gradient(
+      circle,
+      #80f2ff,
+      #128ed1 50%,
+      #075a9a
+    );
+
+}
+
+
+.rng-orb {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  width:
+    130px;
+
+  height:
+    130px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  transform:
+    translate(-50%,-50%);
+
+  border:
+    2px solid rgba(255,255,255,.8);
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      #ffffff,
+      #8cefff 30%,
+      #159fd5 75%
+    );
+
+  box-shadow:
+    0 0 40px rgba(110,240,255,.7),
+    inset 0 5px 10px rgba(255,255,255,.7);
+
+}
+
+
+.rng-orb span {
+
+  color:
+    white;
+
+  font-size:
+    52px;
+
+  font-weight:
+    900;
+
+  text-shadow:
+    0 3px 5px rgba(0,80,120,.3);
+
+}
+
+
+.rng-particle {
+
+  position:
+    absolute;
+
+  width:
+    8px;
+
+  height:
+    8px;
+
+  border-radius:
+    50%;
+
+  background:
+    white;
+
+  box-shadow:
+    0 0 12px white;
+
+  animation:
+    rngFloat 4s ease-in-out infinite;
+
+}
+
+
+.particle-a {
+
+  left:
+    15%;
+
+  top:
+    30%;
+
+}
+
+
+.particle-b {
+
+  right:
+    17%;
+
+  top:
+    24%;
+
+  animation-delay:
+    1s;
+
+}
+
+
+.particle-c {
+
+  left:
+    25%;
+
+  bottom:
+    18%;
+
+  animation-delay:
+    2s;
+
+}
+
+
+@keyframes rngFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-20px);
+  }
+
+}
+
+
+/* =========================================================
+   SENTINEL
+========================================================= */
+
+.sentinel-visual {
+
+  background:
+    linear-gradient(
+      180deg,
+      #172b47,
+      #07101e
+    );
+
+}
+
+
+.scanline {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255,255,255,.035) 4px
+    );
+
+}
+
+
+.sentinel-ship {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    55%;
+
+  transform:
+    translate(-50%,-50%);
+
+  color:
+    #67ddff;
+
+  font-size:
+    50px;
+
+  text-shadow:
+    0 0 18px #20caff;
+
+}
+
+
+.enemy {
+
+  position:
+    absolute;
+
+  color:
+    #ff5364;
+
+  text-shadow:
+    0 0 15px #ff2e46;
+
+  animation:
+    enemyMove 3s ease-in-out infinite;
+
+}
+
+
+.enemy-one {
+
+  top:
+    20%;
+
+  left:
+    25%;
+
+}
+
+
+.enemy-two {
+
+  right:
+    22%;
+
+  bottom:
+    20%;
+
+  animation-delay:
+    1s;
+
+}
+
+
+@keyframes enemyMove {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(18px);
+  }
+
+}
+
+
+.hud-corner {
+
+  position:
+    absolute;
+
+  top:
+    12px;
+
+  left:
+    15px;
+
+  color:
+    #56ddff;
+
+  font-family:
+    monospace;
+
+  font-size:
+    8px;
+
+}
+
+
+/* =========================================================
+   CHEMISTRY
+========================================================= */
+
+.chemistry-visual {
+
+  background:
+    radial-gradient(
+      circle,
+      #d9ffff,
+      #6ad8d8 45%,
+      #399ba6
+    );
+
+}
+
+
+.atom {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  width:
+    120px;
+
+  height:
+    120px;
+
+  transform:
+    translate(-50%,-50%);
+
+}
+
+
+.atom::before,
+.atom::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    15px;
+
+  border:
+    2px solid rgba(255,255,255,.75);
+
+  border-radius:
+    50%;
+
+}
+
+
+.atom::before {
+
+  transform:
+    rotate(60deg);
+
+}
+
+
+.atom::after {
+
+  transform:
+    rotate(-60deg);
+
+}
+
+
+.atom-core {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  width:
+    45px;
+
+  height:
+    45px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  transform:
+    translate(-50%,-50%);
+
+  border-radius:
+    50%;
+
+  color:
+    white;
+
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      #ffdb68,
+      #ef9d32
+    );
+
+  box-shadow:
+    0 0 20px rgba(255,190,60,.6);
+
+  font-weight:
+    900;
+
+}
+
+
+.electron {
+
+  position:
+    absolute;
+
+  width:
+    9px;
+
+  height:
+    9px;
+
+  border-radius:
+    50%;
+
+  background:
+    white;
+
+  box-shadow:
+    0 0 10px white;
+
+}
+
+
+.electron-a {
+
+  left:
+    15px;
+
+  top:
+    45px;
+
+}
+
+
+.electron-b {
+
+  right:
+    15px;
+
+  top:
+    55px;
+
+}
+
+
+.electron-c {
+
+  left:
+    55px;
+
+  bottom:
+    5px;
+
+}
+
+
+/* =========================================================
+   CODEPEN VISUAL
+========================================================= */
+
+.codepen-visual {
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #182127,
+      #05080a
+    );
+
+}
+
+
+.code-window {
+
+  width:
+    80%;
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  border-radius:
+    10px;
+
+  overflow:
+    hidden;
+
+  background:
+    #0e1519;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+
+}
+
+
+.code-window-bar {
+
+  display:
+    flex;
+
+  gap:
+    5px;
+
+  padding:
+    8px;
+
+  background:
+    #1b262c;
+
+}
+
+
+.code-window-bar span {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  border-radius:
+    50%;
+
+  background:
+    #75858d;
+
+}
+
+
+.fake-code {
+
+  padding:
+    20px;
+
+  color:
+    #7de4a3;
+
+  font-family:
+    monospace;
+
+  font-size:
+    10px;
+
+  line-height:
+    2;
+
+}
+
+
+.fake-blue {
+
+  color:
+    #68d9ff;
+
+}
+
+
+/* =========================================================
+   PROJECT COPY
+========================================================= */
+
+.project-copy {
+
+  padding:
+    27px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+}
+
+
+.project-meta {
+
+  display:
+    flex;
+
+  gap:
+    7px;
+
+}
+
+
+.project-meta span {
+
+  padding:
+    5px 7px;
+
+  border-radius:
+    7px;
+
+  color:
+    #4d8b9e;
+
+  background:
+    rgba(70,190,220,.09);
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.project-copy h3 {
+
+  margin:
+    15px 0 7px;
+
+  font-size:
+    24px;
+
+}
+
+
+.project-copy p {
+
+  margin:
+    0;
+
+  color:
+    #557f8f;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.7;
+
+}
+
+
+.project-features {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    5px;
+
+  margin:
+    17px 0;
+
+}
+
+
+.project-features span {
+
+  padding:
+    6px 8px;
+
+  border-radius:
+    8px;
+
+  color:
+    #39819a;
+
+  background:
+    rgba(60,190,220,.1);
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.project-actions {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  margin-top:
+    18px;
+
+}
+
+
+.small-aero-button {
+
+  padding:
+    9px 12px;
+
+  border:
+    1px solid white;
+
+  border-radius:
+    10px;
+
+  color:
+    #176482;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #a5eaff
+    );
+
+  box-shadow:
+    inset 0 1px 0 white,
+    0 5px 10px rgba(0,90,130,.12);
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  text-decoration:
+    none;
+
+}
+
+
+.text-link {
+
+  color:
+    #3786a0;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  text-decoration:
+    none;
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-strip {
+
+  width:
+    min(1100px, calc(100% - 30px));
+
+  margin:
+    -20px auto 110px;
+
+  padding:
+    17px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:
+    10px;
+
+  border:
+    1px solid rgba(255,255,255,.92);
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(255,255,255,.55);
+
+  box-shadow:
+    var(--shadow-small);
+
+}
+
+
+.stat-box {
+
+  text-align:
+    center;
+
+  padding:
+    10px;
+
+}
+
+
+.stat-box strong,
+.stat-box span {
+
+  display:
+    block;
+
+}
+
+
+.stat-box strong {
+
+  color:
+    #1598c8;
+
+  font-size:
+    25px;
+
+}
+
+
+.stat-box span {
+
+  margin-top:
+    2px;
+
+  color:
+    #648e9e;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+/* =========================================================
+   SOCIAL BOARD
+========================================================= */
+
+.social-board {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:
+    14px;
+
+}
+
+
+.social-tile {
+
+  position:
+    relative;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+
+  padding:
+    17px;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid rgba(255,255,255,.94);
+
+  border-radius:
+    20px;
+
+  color:
+    var(--text);
+
+  background:
+    rgba(255,255,255,.66);
+
+  box-shadow:
+    var(--shadow-small);
+
+  text-decoration:
+    none;
+
+  transition:
+    .22s ease;
+
+}
+
+
+.social-tile:hover {
+
+  transform:
+    translateY(-5px);
+
+}
+
+
+.social-icon-box {
+
+  width:
+    53px;
+
+  height:
+    53px;
+
+  flex:
+    0 0 auto;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid rgba(255,255,255,.8);
+
+  border-radius:
+    15px;
+
+  background:
+    rgba(255,255,255,.76);
+
+  box-shadow:
+    0 6px 12px rgba(0,80,130,.10);
+
+}
+
+
+.social-icon-box svg {
+
+  width:
+    27px;
+
+  height:
+    27px;
+
+}
+
+
+.github-tile .social-icon-box {
+
+  color:
+    #20262b;
+
+}
+
+
+.dev-tile .social-icon-box {
+
+  color:
+    #111;
+
+}
+
+
+.codepen-tile .social-icon-box {
+
+  color:
+    #111;
+
+}
+
+
+.instagram-tile .social-icon-box {
+
+  color:
+    #d8497a;
+
+}
+
+
+.social-info {
+
+  min-width:
+    0;
+
+}
+
+
+.social-info small,
+.social-info strong,
+.social-info span {
+
+  display:
+    block;
+
+}
+
+
+.social-info small {
+
+  color:
+    #67909e;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+}
+
+
+.social-info strong {
+
+  margin-top:
+    2px;
+
+  font-size:
+    16px;
+
+}
+
+
+.social-info span {
+
+  margin-top:
+    2px;
+
+  overflow:
+    hidden;
+
+  color:
+    #638796;
+
+  font-size:
+    9px;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+}
+
+
+.social-arrow {
+
+  margin-left:
+    auto;
+
+  color:
+    #4d9ab1;
+
+  font-size:
+    19px;
+
+}
+
+
+/* =========================================================
+   RANDOM ZONE
+========================================================= */
+
+.random-zone {
+
+  position:
+    relative;
+
+  width:
+    min(900px, calc(100% - 30px));
+
+  min-height:
+    310px;
+
+  margin:
+    130px auto 100px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid rgba(255,255,255,.95);
+
+  border-radius:
+    35px;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255,255,255,.95),
+      rgba(190,242,255,.68) 40%,
+      rgba(71,196,235,.62)
+    );
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+.random-zone::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    280px;
+
+  height:
+    280px;
+
+  left:
+    -100px;
+
+  bottom:
+    -150px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.2);
+
+}
+
+
+.random-zone::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    230px;
+
+  height:
+    230px;
+
+  right:
+    -80px;
+
+  top:
+    -130px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.25);
+
+}
+
+
+.random-content {
+
+  position:
+    relative;
+
+  z-index:
+    3;
+
+  text-align:
+    center;
+
+}
+
+
+.random-eyebrow {
+
+  color:
+    #3886a0;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    2px;
+
+}
+
+
+.random-content h2 {
+
+  margin:
+    10px 0 4px;
+
+  color:
+    #16617d;
+
+  font-size:
+    29px;
+
+}
+
+
+.random-content p {
+
+  margin:
+    0;
+
+  color:
+    #4e8395;
+
+  font-size:
+    11px;
+
+}
+
+
+.dangerously-shiny-button {
+
+  position:
+    relative;
+
+  margin-top:
+    22px;
+
+  padding:
+    13px 20px;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid white;
+
+  border-radius:
+    15px;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ff9a9a,
+      #e94d62
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.8),
+    0 8px 16px rgba(190,50,70,.2);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  cursor:
+    pointer;
+
+  transition:
+    .2s ease;
+
+}
+
+
+.dangerously-shiny-button:hover {
+
+  transform:
+    translateY(-4px)
+    rotate(-1deg);
+
+  box-shadow:
+    inset 0 2px 0 white,
+    0 13px 24px rgba(190,50,70,.25);
+
+}
+
+
+.dangerously-shiny-button span {
+
+  margin:
+    0 5px;
+
+}
+
+
+.random-message {
+
+  min-height:
+    18px;
+
+  margin-top:
+    12px;
+
+  color:
+    #317f96;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+}
+
+
+.random-decor {
+
+  position:
+    absolute;
+
+  color:
+    rgba(255,255,255,.9);
+
+  font-size:
+    40px;
+
+  animation:
+    decorFloat 5s ease-in-out infinite;
+
+}
+
+
+.random-star {
+
+  left:
+    13%;
+
+  top:
+    25%;
+
+}
+
+
+.random-star-two {
+
+  right:
+    14%;
+
+  bottom:
+    20%;
+
+  animation-delay:
+    1s;
+
+}
+
+
+@keyframes decorFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0);
+  }
+
+  50% {
+    transform:
+      translateY(-15px)
+      rotate(8deg);
+  }
+
+}
+
+
+/* =========================================================
+   FINAL MESSAGE
+========================================================= */
+
+.final-message {
+
+  position:
+    relative;
+
+  min-height:
+    500px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  overflow:
+    hidden;
+
+  text-align:
+    center;
+
+}
+
+
+.final-sky-orb {
+
+  position:
+    absolute;
+
+  width:
+    350px;
+
+  height:
+    350px;
+
+  top:
+    30px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.8),
+      rgba(105,223,246,.12) 70%
+    );
+
+}
+
+
+.final-inner {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  max-width:
+    700px;
+
+  padding:
+    30px;
+
+}
+
+
+.final-inner > span {
+
+  color:
+    #3588a0;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    2px;
+
+}
+
+
+.final-inner h2 {
+
+  margin:
+    13px 0;
+
+  color:
+    #ffffff;
+
+  font-size:
+    clamp(38px,6vw,65px);
+
+  line-height:
+    .98;
+
+  text-shadow:
+    0 4px 0 #48a9c6,
+    0 10px 22px rgba(0,90,130,.2);
+
+}
+
+
+.final-inner p {
+
+  color:
+    #4a8398;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+}
+
+
+.final-buttons {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    8px;
+
+  margin-top:
+    20px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ocean-footer {
+
+  position:
+    relative;
+
+  height:
+    620px;
+
+  overflow:
+    hidden;
+
+  color:
+    white;
+
+}
+
+
+.footer-sky {
+
+  position:
+    absolute;
+
+  inset:
+    0 0 47%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #55d7ff,
+      #a9edff
+    );
+
+}
+
+
+
+
+
+.footer-cloud {
+
+  position:
+    absolute;
+
+  width:
+    200px;
+
+  height:
+    48px;
+
+  border-radius:
+    100px;
+
+  background:
+    rgba(255,255,255,.9);
+
+}
+
+
+.footer-cloud span {
+
+  position:
+    absolute;
+
+  bottom:
+    12px;
+
+  width:
+    65px;
+
+  height:
+    65px;
+
+  border-radius:
+    50%;
+
+  background:
+    white;
+
+}
+
+
+.footer-cloud span:nth-child(1) {
+
+  left:
+    25px;
+
+}
+
+
+.footer-cloud span:nth-child(2) {
+
+  right:
+    25px;
+
+  width:
+    50px;
+
+  height:
+    50px;
+
+}
+
+
+.footer-cloud-one {
+
+  top:
+    90px;
+
+  left:
+    10%;
+
+}
+
+
+.footer-cloud-two {
+
+  top:
+    145px;
+
+  right:
+    5%;
+
+  transform:
+    scale(.65);
+
+}
+
+
+/* =========================================================
+   FOOTER LAND
+========================================================= */
+
+.footer-land {
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  bottom:
+    40%;
+
+  height:
+    120px;
+
+  overflow:
+    hidden;
+
+}
+
+
+.hill {
+
+  position:
+    absolute;
+
+  bottom:
+    -70px;
+
+  width:
+    420px;
+
+  height:
+    180px;
+
+  border-radius:
+    50% 50% 0 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #7ad36d,
+      #319b4a
+    );
+
+}
+
+
+.hill-one {
+
+  left:
+    -100px;
+
+}
+
+
+.hill-two {
+
+  left:
+    30%;
+
+  transform:
+    scale(1.2);
+
+}
+
+
+.hill-three {
+
+  right:
+    -100px;
+
+  transform:
+    scale(.9);
+
+}
+
+
+/* =========================================================
+   OCEAN
+========================================================= */
+
+.footer-ocean {
+
+  position:
+    absolute;
+
+  left:
+    -5%;
+
+  bottom:
+    0;
+
+  width:
+    110%;
+
+  height:
+    55%;
+
+  overflow:
+    hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #31c8ed,
+      #078bcf 65%,
+      #0068ad
+    );
+
+}
+
+
+.ocean-layer {
+
+  position:
+    absolute;
+
+  left:
+    -5%;
+
+  width:
+    110%;
+
+  border-radius:
+    50% 50% 0 0 / 100% 100% 0 0;
+
+}
+
+
+.ocean-back {
+
+  top:
+    -75px;
+
+  height:
+    155px;
+
+  background:
+    #78e3ef;
+
+  animation:
+    waveBack 8s ease-in-out infinite alternate;
+
+}
+
+
+.ocean-middle {
+
+  top:
+    -45px;
+
+  height:
+    130px;
+
+  background:
+    #3ed1e9;
+
+  animation:
+    waveMiddle 6s ease-in-out infinite alternate-reverse;
+
+}
+
+
+.ocean-front {
+
+  top:
+    -15px;
+
+  height:
+    110px;
+
+  background:
+    #12b7df;
+
+  animation:
+    waveFront 5s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes waveBack {
+
+  from {
+    transform:
+      translateX(-2%)
+      rotate(-1deg);
+  }
+
+  to {
+    transform:
+      translateX(2%)
+      rotate(1deg);
+  }
+
+}
+
+
+@keyframes waveMiddle {
+
+  from {
+    transform:
+      translateX(3%)
+      rotate(1deg);
+  }
+
+  to {
+    transform:
+      translateX(-3%)
+      rotate(-1deg);
+  }
+
+}
+
+
+@keyframes waveFront {
+
+  from {
+    transform:
+      translateX(-2%);
+  }
+
+  to {
+    transform:
+      translateX(2%);
+  }
+
+}
+
+
+/* =========================================================
+   OCEAN BUBBLES
+========================================================= */
+
+.ocean-bubble {
+
+  position:
+    absolute;
+
+  bottom:
+    20%;
+
+  border:
+    2px solid rgba(255,255,255,.35);
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.09);
+
+  animation:
+    bubbleRise 6s linear infinite;
+
+}
+
+
+.bubble-a {
+
+  left:
+    18%;
+
+  width:
+    15px;
+
+  height:
+    15px;
+
+}
+
+
+.bubble-b {
+
+  left:
+    32%;
+
+  width:
+    8px;
+
+  height:
+    8px;
+
+  animation-delay:
+    1s;
+
+}
+
+
+.bubble-c {
+
+  left:
+    55%;
+
+  width:
+    22px;
+
+  height:
+    22px;
+
+  animation-delay:
+    2s;
+
+}
+
+
+.bubble-d {
+
+  left:
+    71%;
+
+  width:
+    10px;
+
+  height:
+    10px;
+
+  animation-delay:
+    3s;
+
+}
+
+
+.bubble-e {
+
+  left:
+    82%;
+
+  width:
+    17px;
+
+  height:
+    17px;
+
+  animation-delay:
+    4s;
+
+}
+
+
+@keyframes bubbleRise {
+
+  from {
+    transform:
+      translateY(80px);
+    opacity:
+      0;
+  }
+
+  20% {
+    opacity:
+      1;
+  }
+
+  to {
+    transform:
+      translateY(-230px);
+    opacity:
+      0;
+  }
+
+}
+
+
+/* =========================================================
+   FISH
+========================================================= */
+
+.ocean-fish {
+
+  position:
+    absolute;
+
+  left:
+    -80px;
+
+  font-size:
+    30px;
+
+  filter:
+    drop-shadow(
+      0 5px 4px rgba(0,70,120,.2)
+    );
+
+  animation:
+    swimAcross 18s linear infinite;
+
+}
+
+
+.fish-a {
+
+  top:
+    42%;
+
+}
+
+
+.fish-b {
+
+  top:
+    61%;
+
+  animation-delay:
+    5s;
+
+  font-size:
+    24px;
+
+}
+
+
+.fish-c {
+
+  top:
+    76%;
+
+  animation-delay:
+    10s;
+
+  font-size:
+    18px;
+
+}
+
+
+@keyframes swimAcross {
+
+  from {
+    transform:
+      translateX(-120px);
+  }
+
+  to {
+    transform:
+      translateX(calc(100vw + 180px));
+  }
+
+}
+
+
+/* =========================================================
+   SEA FLOOR
+========================================================= */
+
+.sea-floor {
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  bottom:
+    0;
+
+  height:
+    25%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,90,140,.1),
+      rgba(0,70,120,.25)
+    );
+
+}
+
+
+.sea-floor span {
+
+  position:
+    absolute;
+
+  bottom:
+    0;
+
+  width:
+    12px;
+
+  height:
+    60px;
+
+  border-radius:
+    50% 50% 0 0;
+
+  background:
+    rgba(30,140,100,.35);
+
+}
+
+
+.sea-floor span:nth-child(1) {
+
+  left:
+    10%;
+
+  height:
+    55px;
+
+}
+
+
+.sea-floor span:nth-child(2) {
+
+  left:
+    30%;
+
+  height:
+    80px;
+
+}
+
+
+.sea-floor span:nth-child(3) {
+
+  left:
+    53%;
+
+  height:
+    45px;
+
+}
+
+
+.sea-floor span:nth-child(4) {
+
+  left:
+    72%;
+
+  height:
+    70px;
+
+}
+
+
+.sea-floor span:nth-child(5) {
+
+  left:
+    90%;
+
+  height:
+    52px;
+
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.footer-content {
+
+  position:
+    absolute;
+
+  inset:
+    auto 0 0;
+
+  z-index:
+    20;
+
+  padding:
+    28px 7% 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,70,120,0),
+      rgba(0,63,110,.52)
+    );
+
+  text-shadow:
+    0 2px 4px rgba(0,60,100,.4);
+
+}
+
+
+.footer-main {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    30px;
+
+}
+
+
+.footer-logo {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+}
+
+
+.footer-logo-avatar {
+
+  width:
+    45px;
+
+  height:
+    45px;
+
+  padding:
+    2px;
+
+  border:
+    1px solid rgba(255,255,255,.7);
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.3);
+
+}
+
+
+.footer-logo-avatar img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  border-radius:
+    50%;
+
+}
+
+
+.footer-logo strong,
+.footer-logo span {
+
+  display:
+    block;
+
+}
+
+
+.footer-logo strong {
+
+  font-size:
+    15px;
+
+}
+
+
+.footer-logo span {
+
+  font-size:
+    8px;
+
+}
+
+
+.footer-main > p {
+
+  max-width:
+    330px;
+
+  margin:
+    0;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+}
+
+
+.footer-nav {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  margin:
+    18px 0;
+
+}
+
+
+.footer-nav a {
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+}
+
+
+.footer-bottom {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  padding-top:
+    13px;
+
+  border-top:
+    1px solid rgba(255,255,255,.18);
+
+  color:
+    rgba(255,255,255,.78);
+
+  font-size:
+    7px;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-section {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .hero-right {
+
+    width:
+      min(560px,100%);
+
+    margin:
+      auto;
+
+  }
+
+
+  .about-layout {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .tool-grid {
+
+    grid-template-columns:
+      repeat(3,1fr);
+
+  }
+
+
+  .projects-board {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .project-featured {
+
+    grid-column:
+      auto;
+
+  }
+
+
+  .stats-strip {
+
+    margin-bottom:
+      80px;
+
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .main-navigation {
+
+    display:
+      none;
+
+  }
+
+
+  .header-status {
+
+    margin-left:
+      auto;
+
+  }
+
+
+  .quick-bar {
+
+    flex-wrap:
+      wrap;
+
+  }
+
+
+  .quick-divider {
+
+    display:
+      none;
+
+  }
+
+
+  .quick-item {
+
+    width:
+      calc(50% - 10px);
+
+  }
+
+
+  .what-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .social-board {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .stats-strip {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .project-item,
+  .project-featured {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .project-visual {
+
+    min-height:
+      230px;
+
+  }
+
+
+  .identity-mini-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .footer-main {
+
+    flex-direction:
+      column;
+
+    text-align:
+      center;
+
+  }
+
+
+  .footer-bottom {
+
+    flex-direction:
+      column;
+
+    align-items:
+      center;
+
+    gap:
+      6px;
+
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .site-header {
+
+    width:
+      calc(100% - 18px);
+
+  }
+
+
+  .header-inner {
+
+    min-height:
+      58px;
+
+  }
+
+
+  .brand-avatar {
+
+    width:
+      39px;
+
+    height:
+      39px;
+
+  }
+
+
+  .brand-copy strong {
+
+    font-size:
+      12px;
+
+  }
+
+
+  .header-status {
+
+    padding:
+      7px;
+
+    font-size:
+      7px;
+
+  }
+
+
+  .hero-section,
+  .content-section {
+
+    width:
+      calc(100% - 20px);
+
+  }
+
+
+  .hero-section {
+
+    padding-top:
+      70px;
+
+  }
+
+
+  .hero-title {
+
+    font-size:
+      55px;
+
+    letter-spacing:
+      -3px;
+
+  }
+
+
+  .hero-description p {
+
+    font-size:
+      16px;
+
+  }
+
+
+  .hero-actions {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .hero-actions .aero-button {
+
+    width:
+      100%;
+
+  }
+
+
+  .floating-status-card {
+
+    left:
+      10px;
+
+    bottom:
+      -18px;
+
+  }
+
+
+  .section-heading-copy h2 {
+
+    font-size:
+      27px;
+
+  }
+
+
+  .tool-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .toolbox-bottom {
+
+    flex-direction:
+      column;
+
+    gap:
+      5px;
+
+  }
+
+
+  .about-body {
+
+    grid-template-columns:
+      22px 1fr;
+
+  }
+
+
+  .quick-item {
+
+    width:
+      100%;
+
+  }
+
+
+  .stats-strip {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
+  .footer-nav {
+
+    gap:
+      12px;
+
+  }
+
+
+  .ocean-footer {
+
+    height:
+      650px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      .01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    scroll-behavior:
+      auto !important;
+
+    transition-duration:
+      .01ms !important;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL BACKGROUND
+========================================================= -->
+
+<div class="page-background">
+
+  <div class="bg-sun"></div>
+
+  <div class="bg-cloud cloud-one">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="bg-cloud cloud-two">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="bg-cloud cloud-three">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="sky-speck speck-one"></div>
+  <div class="sky-speck speck-two"></div>
+  <div class="sky-speck speck-three"></div>
+  <div class="sky-speck speck-four"></div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SITE WRAPPER
+========================================================= -->
+
+<div class="site-wrapper">
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+  <div class="header-inner">
+
+
+    <!-- BRAND -->
+
+    <a
+      href="#top"
+      class="site-brand"
+    >
+
+      <div class="brand-avatar">
+
+        <img
+          src="https://avatars.githubusercontent.com/u/269651521?v=4"
+          alt="yourr-ikyy"
+        >
+
+        <div class="avatar-shine"></div>
+
+      </div>
+
+
+      <div class="brand-copy">
+
+        <strong>
+          yourr-ikyy
+        </strong>
+
+        <span>
+          internet corner
+        </span>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- NAV -->
+
+    <nav class="main-navigation">
+
+      <a
+        href="#top"
+        class="nav-link active"
+      >
+        HOME
+      </a>
+
+      <a
+        href="#about"
+        class="nav-link"
+      >
+        ABOUT
+      </a>
+
+      <a
+        href="#toolbox"
+        class="nav-link"
+      >
+        LAB
+      </a>
+
+      <a
+        href="#projects"
+        class="nav-link"
+      >
+        WORK
+      </a>
+
+      <a
+        href="#links"
+        class="nav-link"
+      >
+        LINKS
+      </a>
+
+    </nav>
+
+
+
+    <!-- ONLINE -->
+
+    <div class="header-status">
+
+      <span class="status-pulse"></span>
+
+      <span>
+        ONLINE
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main id="top">
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero-section">
+
+
+  <div class="hero-left">
+
+
+    <div class="hero-badge">
+
+      <span class="badge-star">
+        ✦
+      </span>
+
+      WELCOME TO MY LITTLE CORNER OF THE INTERNET
+
+      <span class="badge-star">
+        ✦
+      </span>
+
+    </div>
+
+
+
+    <div class="hero-title-wrap">
+
+      <span class="hero-small-title">
+        HI, INTERNET.
+      </span>
+
+      <h1 class="hero-title">
+
+        i'm
+
+        <span>
+          yourr-ikyy
+        </span>
+
+      </h1>
+
+    </div>
+
+
+
+    <div class="hero-description">
+
+      <p>
+        i make websites, experiments,
+        interfaces, random stuff,
+        and occasionally something
+        that actually works on the first try.
+      </p>
+
+    </div>
+
+
+
+    <div class="hero-mini-line">
+
+      <div class="mini-line-dot"></div>
+
+      <span>
+        web developer / designer / tinkerer
+      </span>
+
+    </div>
+
+
+
+    <!-- HERO BUTTONS -->
+
+    <div class="hero-actions">
+
+      <a
+        href="https://github.com/yourr-ikyy"
+        target="_blank"
+        class="aero-button primary"
+      >
+
+        <span class="button-icon">
+          ◈
+        </span>
+
+        <span>
+          OPEN GITHUB
+        </span>
+
+      </a>
+
+
+      <a
+        href="https://codepen.io/eL-Fikyzz"
+        target="_blank"
+        class="aero-button"
+      >
+
+        <span class="button-icon">
+          ◇
+        </span>
+
+        <span>
+          CODEPEN LAB
+        </span>
+
+      </a>
+
+
+      <a
+        href="#projects"
+        class="aero-button"
+      >
+
+        <span class="button-icon">
+          ✦
+        </span>
+
+        <span>
+          SEE MY STUFF
+        </span>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- HERO MICRO LINKS -->
+
+    <div class="hero-micro-links">
+
+      <a href="#about">
+        more about me
+      </a>
+
+      <span>
+        •
+      </span>
+
+      <a href="#toolbox">
+        things i use
+      </a>
+
+      <span>
+        •
+      </span>
+
+      <a href="#links">
+        find me online
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =======================================================
+       HERO PROFILE WINDOW
+  ======================================================== -->
+
+  <div class="hero-right">
+
+
+    <div class="profile-window aero-window">
+
+
+      <div class="window-bar">
+
+        <div class="window-title">
+
+          <span class="window-dot"></span>
+
+          <span>
+            yourr-ikyy.exe
+          </span>
+
+        </div>
+
+
+        <div class="window-controls">
+
+          <button>
+            −
+          </button>
+
+          <button>
+            □
+          </button>
+
+          <button>
+            ×
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="profile-content">
+
+
+        <div class="profile-avatar-wrap">
+
+          <div class="profile-avatar-ring">
+
+            <img
+              src="https://avatars.githubusercontent.com/u/269651521?v=4"
+              alt="yourr-ikyy avatar"
+            >
+
+            <div class="profile-avatar-gloss"></div>
+
+          </div>
+
+
+          <div class="avatar-status">
+
+            <span></span>
+
+            ONLINE
+
+          </div>
+
+        </div>
+
+
+
+        <div class="profile-name">
+
+          <h2>
+            yourr-ikyy
+          </h2>
+
+          <p>
+            building things on the internet
+          </p>
+
+        </div>
+
+
+
+        <div class="profile-info-grid">
+
+
+          <div class="info-tile">
+
+            <span>
+              ROLE
+            </span>
+
+            <strong>
+              WEB DEV
+            </strong>
+
+          </div>
+
+
+          <div class="info-tile">
+
+            <span>
+              MOOD
+            </span>
+
+            <strong>
+              CODING
+            </strong>
+
+          </div>
+
+
+          <div class="info-tile">
+
+            <span>
+              STATUS
+            </span>
+
+            <strong>
+              BUILDING
+            </strong>
+
+          </div>
+
+
+          <div class="info-tile">
+
+            <span>
+              ENERGY
+            </span>
+
+            <strong>
+              ∞
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="profile-progress">
+
+          <div class="progress-header">
+
+            <span>
+              INTERNET EXP
+            </span>
+
+            <strong>
+              100%
+            </strong>
+
+          </div>
+
+
+          <div class="progress-track">
+
+            <div class="progress-fill"></div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="profile-footer">
+
+          <span>
+            last seen: probably five minutes ago
+          </span>
+
+          <span>
+            ●
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- FLOATING MINI CARD -->
+
+    <div class="floating-status-card">
+
+      <span class="floating-icon">
+        ⚡
+      </span>
+
+      <div>
+
+        <small>
+          CURRENTLY
+        </small>
+
+        <strong>
+          making something
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     QUICK BAR
+========================================================= -->
+
+<section class="quick-bar">
+
+
+  <div class="quick-item">
+
+    <span class="quick-icon">
+      &lt;/&gt;
+    </span>
+
+    <div>
+
+      <small>
+        I BUILD
+      </small>
+
+      <strong>
+        WEBSITES
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <div class="quick-divider"></div>
+
+
+  <div class="quick-item">
+
+    <span class="quick-icon">
+      ✦
+    </span>
+
+    <div>
+
+      <small>
+        I LIKE
+      </small>
+
+      <strong>
+        VISUAL UI
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <div class="quick-divider"></div>
+
+
+  <div class="quick-item">
+
+    <span class="quick-icon">
+      ⚙
+    </span>
+
+    <div>
+
+      <small>
+        I ALSO DO
+      </small>
+
+      <strong>
+        HARDWARE
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <div class="quick-divider"></div>
+
+
+  <div class="quick-item">
+
+    <span class="quick-icon">
+      ☁
+    </span>
+
+    <div>
+
+      <small>
+        THIS SITE
+      </small>
+
+      <strong>
+        IS PURE CSS
+      </strong>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT SECTION
+========================================================= -->
+
+<section
+  id="about"
+  class="content-section"
+>
+
+
+  <div class="section-header">
+
+    <div class="section-number">
+      01
+    </div>
+
+    <div class="section-heading-copy">
+
+      <span>
+        A LITTLE BIT ABOUT ME
+      </span>
+
+      <h2>
+        so... who is this guy?
+      </h2>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="about-layout">
+
+
+    <!-- MAIN ABOUT -->
+
+    <article class="about-card large-panel">
+
+      <div class="panel-header">
+
+        <div class="panel-file">
+
+          <span>
+            🌐
+          </span>
+
+          about_me.txt
+
+        </div>
+
+        <span>
+          1.0 KB
+        </span>
+
+      </div>
+
+
+      <div class="about-body">
+
+        <div class="about-line-number">
+          01
+        </div>
+
+        <p>
+          i'm <strong>yourr-ikyy</strong>.
+        </p>
+
+
+        <div class="about-line-number">
+          02
+        </div>
+
+        <p>
+          i'm interested in web development,
+          visual interfaces, creative coding,
+          engineering, and basically anything
+          where an idea can become something real.
+        </p>
+
+
+        <div class="about-line-number">
+          03
+        </div>
+
+        <p>
+          i like making websites that actually
+          feel like something instead of just
+          being a collection of boxes with text
+          inside them.
+        </p>
+
+
+        <div class="about-line-number">
+          04
+        </div>
+
+        <p>
+          sometimes the design is clean.
+          sometimes it has way too many animations.
+          sometimes both happen at the same time.
+        </p>
+
+
+        <div class="about-quote">
+
+          <span class="quote-mark">
+            “
+          </span>
+
+          where CSS goes too far.
+
+          <span class="quote-mark">
+            ”
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- FACTS -->
+
+    <article class="facts-card glass-panel">
+
+      <div class="panel-header simple">
+
+        <strong>
+          🧃 RANDOM FACTS
+        </strong>
+
+        <span>
+          .txt
+        </span>
+
+      </div>
+
+
+      <div class="fact-list">
+
+
+        <div class="fact-row">
+
+          <span class="fact-number">
+            01
+          </span>
+
+          <span>
+            i make random web experiments
+          </span>
+
+        </div>
+
+
+        <div class="fact-row">
+
+          <span class="fact-number">
+            02
+          </span>
+
+          <span>
+            i really like visual UI
+          </span>
+
+        </div>
+
+
+        <div class="fact-row">
+
+          <span class="fact-number">
+            03
+          </span>
+
+          <span>
+            one project can become five
+          </span>
+
+        </div>
+
+
+        <div class="fact-row">
+
+          <span class="fact-number">
+            04
+          </span>
+
+          <span>
+            animations are usually involved
+          </span>
+
+        </div>
+
+
+        <div class="fact-row">
+
+          <span class="fact-number">
+            05
+          </span>
+
+          <span>
+            i have a suspicious amount of ideas
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="facts-bottom">
+
+        <span>
+          STATUS
+        </span>
+
+        <strong>
+          STILL BUILDING
+        </strong>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- THREE MINI CARDS -->
+
+    <div class="identity-mini-grid">
+
+
+      <div class="identity-card">
+
+        <span>
+          ✦
+        </span>
+
+        <small>
+          INTEREST
+        </small>
+
+        <strong>
+          WEB
+        </strong>
+
+      </div>
+
+
+      <div class="identity-card">
+
+        <span>
+          ◈
+        </span>
+
+        <small>
+          STYLE
+        </small>
+
+        <strong>
+          VISUAL
+        </strong>
+
+      </div>
+
+
+      <div class="identity-card">
+
+        <span>
+          ⚙
+        </span>
+
+        <small>
+          SIDE QUEST
+        </small>
+
+        <strong>
+          ENGINEERING
+        </strong>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT I DO
+========================================================= -->
+
+<section class="content-section">
+
+
+  <div class="section-header">
+
+    <div class="section-number">
+      02
+    </div>
+
+    <div class="section-heading-copy">
+
+      <span>
+        WHAT I ACTUALLY DO
+      </span>
+
+      <h2>
+        a little bit of everything
+      </h2>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="what-grid">
+
+
+    <article class="what-card">
+
+      <div class="what-icon blue">
+        &lt;/&gt;
+      </div>
+
+      <div class="what-content">
+
+        <span>
+          01 / WEB
+        </span>
+
+        <h3>
+          web development
+        </h3>
+
+        <p>
+          HTML, CSS, JavaScript and
+          building things that live
+          inside a browser.
+        </p>
+
+        <div class="what-tags">
+
+          <span>
+            HTML
+          </span>
+
+          <span>
+            CSS
+          </span>
+
+          <span>
+            JS
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="what-card">
+
+      <div class="what-icon green">
+        ✦
+      </div>
+
+      <div class="what-content">
+
+        <span>
+          02 / UI
+        </span>
+
+        <h3>
+          visual interfaces
+        </h3>
+
+        <p>
+          glass effects, animation,
+          layouts, interactions and
+          making interfaces feel alive.
+        </p>
+
+        <div class="what-tags">
+
+          <span>
+            UI
+          </span>
+
+          <span>
+            UX
+          </span>
+
+          <span>
+            MOTION
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="what-card">
+
+      <div class="what-icon orange">
+        ⚙
+      </div>
+
+      <div class="what-content">
+
+        <span>
+          03 / HARDWARE
+        </span>
+
+        <h3>
+          electronics & engineering
+        </h3>
+
+        <p>
+          Arduino, mechatronics,
+          prototyping and turning
+          weird ideas into physical things.
+        </p>
+
+        <div class="what-tags">
+
+          <span>
+            ARDUINO
+          </span>
+
+          <span>
+            CAD
+          </span>
+
+          <span>
+            MAKING
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="what-card">
+
+      <div class="what-icon purple">
+        ◇
+      </div>
+
+      <div class="what-content">
+
+        <span>
+          04 / EXPERIMENTS
+        </span>
+
+        <h3>
+          random stuff
+        </h3>
+
+        <p>
+          small tools, games, concepts,
+          strange ideas and things made
+          just because i wanted to.
+        </p>
+
+        <div class="what-tags">
+
+          <span>
+            FUN
+          </span>
+
+          <span>
+            RANDOM
+          </span>
+
+          <span>
+            EXPERIMENT
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOOLBOX
+========================================================= -->
+
+<section
+  id="toolbox"
+  class="content-section toolbox-section"
+>
+
+
+  <div class="section-header">
+
+    <div class="section-number">
+      03
+    </div>
+
+    <div class="section-heading-copy">
+
+      <span>
+        MY DIGITAL TOOLBOX
+      </span>
+
+      <h2>
+        things i use to build stuff
+      </h2>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="toolbox-board">
+
+
+    <div class="toolbox-top">
+
+      <div>
+
+        <span>
+          toolbox.exe
+        </span>
+
+        <strong>
+          DEVELOPMENT STACK
+        </strong>
+
+      </div>
+
+      <div class="toolbox-status">
+
+        <span></span>
+
+        ACTIVE
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tool-grid">
+
+
+      <div class="tool-card tool-html">
+
+        <div class="tool-logo">
+          HTML
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            HTML
+          </strong>
+
+          <span>
+            structure
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          CORE
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-css">
+
+        <div class="tool-logo">
+          CSS
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            CSS
+          </strong>
+
+          <span>
+            visual design
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          CORE
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-js">
+
+        <div class="tool-logo">
+          JS
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            JavaScript
+          </strong>
+
+          <span>
+            interaction
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          CORE
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-react">
+
+        <div class="tool-logo">
+          ⚛
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            React
+          </strong>
+
+          <span>
+            components
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          WEB
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-next">
+
+        <div class="tool-logo">
+          N
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            Next.js
+          </strong>
+
+          <span>
+            applications
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          WEB
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-three">
+
+        <div class="tool-logo">
+          3D
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            Three.js
+          </strong>
+
+          <span>
+            3D experiments
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          VISUAL
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-gsap">
+
+        <div class="tool-logo">
+          G
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            GSAP
+          </strong>
+
+          <span>
+            animation
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          MOTION
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-arduino">
+
+        <div class="tool-logo">
+          A
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            Arduino
+          </strong>
+
+          <span>
+            electronics
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          HARDWARE
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-autocad">
+
+        <div class="tool-logo">
+          AC
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            AutoCAD
+          </strong>
+
+          <span>
+            technical design
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          DESIGN
+        </div>
+
+      </div>
+
+
+
+      <div class="tool-card tool-tinker">
+
+        <div class="tool-logo">
+          TC
+        </div>
+
+        <div class="tool-text">
+
+          <strong>
+            TinkerCAD
+          </strong>
+
+          <span>
+            prototyping
+          </span>
+
+        </div>
+
+        <div class="tool-level">
+          MAKING
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="toolbox-bottom">
+
+      <span>
+        more tools will probably appear here eventually
+      </span>
+
+      <span>
+        <b id="toolCounter">
+          10
+        </b>
+        tools loaded
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section
+  id="projects"
+  class="content-section"
+>
+
+
+  <div class="section-header">
+
+    <div class="section-number">
+      04
+    </div>
+
+    <div class="section-heading-copy">
+
+      <span>
+        THINGS I HAVE MADE
+      </span>
+
+      <h2>
+        project shelf
+      </h2>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="projects-board">
+
+
+    <!-- WEBRNG -->
+
+    <article class="project-item project-featured">
+
+      <div class="project-visual webrng-visual">
+
+        <div class="rng-orb">
+          <span>
+            ?
+          </span>
+        </div>
+
+        <div class="rng-particle particle-a"></div>
+        <div class="rng-particle particle-b"></div>
+        <div class="rng-particle particle-c"></div>
+
+      </div>
+
+
+      <div class="project-copy">
+
+        <div class="project-meta">
+
+          <span>
+            PROJECT 01
+          </span>
+
+          <span>
+            WEB EXPERIMENT
+          </span>
+
+        </div>
+
+
+        <h3>
+          WebRNG
+        </h3>
+
+
+        <p>
+          an RNG website picker with
+          luck systems, rarity tiers,
+          codes, roll history and way
+          more UI than an RNG website
+          probably needs.
+        </p>
+
+
+        <div class="project-features">
+
+          <span>
+            500 WEBSITES
+          </span>
+
+          <span>
+            40 RARITIES
+          </span>
+
+          <span>
+            LUCK SYSTEM
+          </span>
+
+        </div>
+
+
+        <div class="project-actions">
+
+          <a
+            href="#"
+            class="small-aero-button"
+          >
+            OPEN PROJECT
+          </a>
+
+          <a
+            href="#"
+            class="text-link"
+          >
+            READ MORE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- SENTINEL -->
+
+    <article class="project-item">
+
+      <div class="project-visual sentinel-visual">
+
+        <div class="scanline"></div>
+
+        <div class="sentinel-ship">
+          ▲
+        </div>
+
+        <div class="enemy enemy-one">
+          ◆
+        </div>
+
+        <div class="enemy enemy-two">
+          ◆
+        </div>
+
+        <div class="hud-corner">
+          SENTINEL
+        </div>
+
+      </div>
+
+
+      <div class="project-copy">
+
+        <div class="project-meta">
+
+          <span>
+            PROJECT 02
+          </span>
+
+          <span>
+            GAME
+          </span>
+
+        </div>
+
+
+        <h3>
+          SENTINEL
+        </h3>
+
+
+        <p>
+          browser game experiment with
+          a controllable ship, enemies,
+          scanlines and a slightly
+          suspicious amount of atmosphere.
+        </p>
+
+
+        <div class="project-actions">
+
+          <a
+            href="#"
+            class="small-aero-button"
+          >
+            OPEN
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CHEMICLAB -->
+
+    <article class="project-item">
+
+      <div class="project-visual chemistry-visual">
+
+        <div class="atom">
+
+          <div class="electron electron-a"></div>
+          <div class="electron electron-b"></div>
+          <div class="electron electron-c"></div>
+
+          <div class="atom-core">
+            C
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-copy">
+
+        <div class="project-meta">
+
+          <span>
+            PROJECT 03
+          </span>
+
+          <span>
+            EDUCATION
+          </span>
+
+        </div>
+
+
+        <h3>
+          chemiclab
+        </h3>
+
+
+        <p>
+          chemistry learning experiments
+          built around the web, atoms,
+          elements and interactive visuals.
+        </p>
+
+
+        <div class="project-actions">
+
+          <a
+            href="#"
+            class="small-aero-button"
+          >
+            EXPLORE
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CODEPEN -->
+
+    <article class="project-item project-wide">
+
+      <div class="project-visual codepen-visual">
+
+        <div class="code-window">
+
+          <div class="code-window-bar">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
+
+          <div class="fake-code">
+
+            <span>
+              &lt;div
+            </span>
+
+            <span class="fake-blue">
+              class="idea"
+            </span>
+
+            <span>
+              &gt;
+            </span>
+
+            <br>
+
+            <span>
+              &nbsp;&nbsp;makeSomething();
+            </span>
+
+            <br>
+
+            <span>
+              &lt;/div&gt;
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-copy">
+
+        <div class="project-meta">
+
+          <span>
+            PROJECT 04
+          </span>
+
+          <span>
+            CODEPEN LAB
+          </span>
+
+        </div>
+
+
+        <h3>
+          random experiments
+        </h3>
+
+
+        <p>
+          posters, scenes, UI experiments,
+          visual effects, tools and random
+          browser ideas that exist because
+          i wanted to make them.
+        </p>
+
+
+        <div class="project-actions">
+
+          <a
+            href="https://codepen.io/eL-Fikyzz"
+            target="_blank"
+            class="small-aero-button"
+          >
+            OPEN CODEPEN
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MINI PROJECT STATS
+========================================================= -->
+
+<section class="stats-strip">
+
+
+  <div class="stat-box">
+
+    <strong>
+      04+
+    </strong>
+
+    <span>
+      PROJECT TYPES
+    </span>
+
+  </div>
+
+
+  <div class="stat-box">
+
+    <strong>
+      ∞
+    </strong>
+
+    <span>
+      RANDOM IDEAS
+    </span>
+
+  </div>
+
+
+  <div class="stat-box">
+
+    <strong>
+      100%
+    </strong>
+
+    <span>
+      CURIOUS
+    </span>
+
+  </div>
+
+
+  <div class="stat-box">
+
+    <strong>
+      1
+    </strong>
+
+    <span>
+      INTERNET CORNER
+    </span>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ONLINE LINKS
+========================================================= -->
+
+<section
+  id="links"
+  class="content-section links-section"
+>
+
+
+  <div class="section-header">
+
+    <div class="section-number">
+      05
+    </div>
+
+    <div class="section-heading-copy">
+
+      <span>
+        FIND ME ONLINE
+      </span>
+
+      <h2>
+        internet places
+      </h2>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="social-board">
+
+
+    <!-- GITHUB -->
+
+    <a
+      href="https://github.com/yourr-ikyy"
+      target="_blank"
+      class="social-tile github-tile"
+    >
+
+      <div class="social-icon-box">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            fill="currentColor"
+            d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.85 10.93.57.1.78-.25.78-.55v-2.13c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.26 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.21.65.79.54A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+          >
+
+          </path>
+
+        </svg>
+
+      </div>
+
+
+      <div class="social-info">
+
+        <small>
+          SOURCE CODE
+        </small>
+
+        <strong>
+          GitHub
+        </strong>
+
+        <span>
+          repositories & experiments
+        </span>
+
+      </div>
+
+
+      <div class="social-arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+
+    <!-- DEV -->
+
+    <a
+      href="https://dev.to/yourrikyy"
+      target="_blank"
+      class="social-tile dev-tile"
+    >
+
+      <div class="social-icon-box">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            fill="currentColor"
+            d="M4.1 2h15.8A2.1 2.1 0 0 1 22 4.1v15.8a2.1 2.1 0 0 1-2.1 2.1H4.1A2.1 2.1 0 0 1 2 19.9V4.1A2.1 2.1 0 0 1 4.1 2Zm1.45 5.6v8.8h2.8c2.1 0 3.1-1.4 3.1-4.35s-1-4.45-3.1-4.45h-2.8Zm2 1.8h.62c.85 0 1.2.72 1.2 2.65 0 1.9-.35 2.55-1.2 2.55h-.62V9.4Zm5.3-1.8v8.8h5.05v-1.8h-3.05v-1.65h2.7v-1.75h-2.7V9.4h3.05V7.6h-5.05Z"
+          >
+
+          </path>
+
+        </svg>
+
+      </div>
+
+
+      <div class="social-info">
+
+        <small>
+          DEVELOPER COMMUNITY
+        </small>
+
+        <strong>
+          DEV
+        </strong>
+
+        <span>
+          articles & developer stuff
+        </span>
+
+      </div>
+
+
+      <div class="social-arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+
+    <!-- CODEPEN -->
+
+    <a
+      href="https://codepen.io/eL-Fikyzz"
+      target="_blank"
+      class="social-tile codepen-tile"
+    >
+
+      <div class="social-icon-box">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            fill="currentColor"
+            d="m12 2.2 9.2 6.1v7.4L12 21.8l-9.2-6.1V8.3L12 2.2Zm0 2.25L5.1 9l6.9 4.58L18.9 9 12 4.45ZM5.05 11.1v3.25L10.1 17.7v-3.35L5.05 11.1Zm13.9 0-5.05 3.25v3.35l5.05-3.35V11.1ZM12 19.1l1.55-1.02v-3.03L12 16.05l-1.55-1v3.03L12 19.1Zm0-5.95L5.6 8.9 12 4.65l6.4 4.25-6.4 4.25Z"
+          >
+
+          </path>
+
+        </svg>
+
+      </div>
+
+
+      <div class="social-info">
+
+        <small>
+          FRONTEND EXPERIMENTS
+        </small>
+
+        <strong>
+          CodePen
+        </strong>
+
+        <span>
+          pens, experiments & visual stuff
+        </span>
+
+      </div>
+
+
+      <div class="social-arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+      href="https://instagram.com/your_ikyz"
+      target="_blank"
+      class="social-tile instagram-tile"
+    >
+
+      <div class="social-icon-box">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            fill="currentColor"
+            d="M7.2 1.5h9.6A5.7 5.7 0 0 1 22.5 7.2v9.6a5.7 5.7 0 0 1-5.7 5.7H7.2a5.7 5.7 0 0 1-5.7-5.7V7.2a5.7 5.7 0 0 1 5.7-5.7Zm0 1.9a3.8 3.8 0 0 0-3.8 3.8v9.6a3.8 3.8 0 0 0 3.8 3.8h9.6a3.8 3.8 0 0 0 3.8-3.8V7.2a3.8 3.8 0 0 0-3.8-3.8H7.2Zm9.95 1.42a1.13 1.13 0 1 1 0 2.26 1.13 1.13 0 0 1 0-2.26ZM12 6.55A5.45 5.45 0 1 1 6.55 12 5.45 5.45 0 0 1 12 6.55Zm0 1.9A3.55 3.55 0 1 0 15.55 12 3.55 3.55 0 0 0 12 8.45Z"
+          >
+
+          </path>
+
+        </svg>
+
+      </div>
+
+
+      <div class="social-info">
+
+        <small>
+          VISUAL STUFF
+        </small>
+
+        <strong>
+          Instagram
+        </strong>
+
+        <span>
+          posts & random internet things
+        </span>
+
+      </div>
+
+
+      <div class="social-arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RANDOM ZONE
+========================================================= -->
+
+<section class="random-zone">
+
+
+  <div class="random-decor random-star">
+    ✦
+  </div>
+
+  <div class="random-decor random-star-two">
+    ✧
+  </div>
+
+
+  <div class="random-content">
+
+
+    <span class="random-eyebrow">
+      SECRET INTERNET ZONE
+    </span>
+
+
+    <h2>
+      you found the random section.
+    </h2>
+
+
+    <p>
+      there is absolutely no reason for this button
+      to exist.
+    </p>
+
+
+    <button
+      id="randomButton"
+      class="dangerously-shiny-button"
+    >
+
+      <span>
+        ✦
+      </span>
+
+      DO NOT PRESS THIS
+
+      <span>
+        ✦
+      </span>
+
+    </button>
+
+
+    <div
+      id="randomMessage"
+      class="random-message"
+    >
+      seriously. don't.
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final-message">
+
+
+  <div class="final-sky-orb"></div>
+
+
+  <div class="final-inner">
+
+    <span>
+      THANKS FOR STOPPING BY
+    </span>
+
+
+    <h2>
+      this little website
+      <br>
+      is still evolving.
+    </h2>
+
+
+    <p>
+      there is probably another unfinished
+      project somewhere on my computer right now.
+    </p>
+
+
+    <div class="final-buttons">
+
+      <a
+        href="#top"
+        class="aero-button primary"
+      >
+        ↑ BACK TO TOP
+      </a>
+
+
+      <a
+        href="https://github.com/yourr-ikyy"
+        target="_blank"
+        class="aero-button"
+      >
+        VIEW GITHUB
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     OCEAN FOOTER
+========================================================= -->
+
+<footer class="ocean-footer">
+
+
+
+
+
+  <!-- DISTANT LAND -->
+
+  <div class="footer-land">
+
+    <div class="hill hill-one"></div>
+    <div class="hill hill-two"></div>
+    <div class="hill hill-three"></div>
+
+  </div>
+
+
+
+  <!-- OCEAN -->
+
+  <div class="footer-ocean">
+
+
+    <div class="ocean-layer ocean-back"></div>
+
+    <div class="ocean-layer ocean-middle"></div>
+
+    <div class="ocean-layer ocean-front"></div>
+
+
+
+    <!-- BUBBLES -->
+
+    <div class="ocean-bubble bubble-a"></div>
+    <div class="ocean-bubble bubble-b"></div>
+    <div class="ocean-bubble bubble-c"></div>
+    <div class="ocean-bubble bubble-d"></div>
+    <div class="ocean-bubble bubble-e"></div>
+
+
+
+    <!-- FISH -->
+
+    <div class="ocean-fish fish-a">
+      🐟
+    </div>
+
+    <div class="ocean-fish fish-b">
+      🐠
+    </div>
+
+    <div class="ocean-fish fish-c">
+      🐟
+    </div>
+
+
+
+    <!-- SEA FLOOR -->
+
+    <div class="sea-floor">
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- FOOTER CONTENT -->
+
+  <div class="footer-content">
+
+
+    <div class="footer-main">
+
+      <div class="footer-logo">
+
+        <div class="footer-logo-avatar">
+
+          <img
+            src="https://avatars.githubusercontent.com/u/269651521?v=4"
+            alt="yourr-ikyy"
+          >
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            yourr-ikyy
+          </strong>
+
+          <span>
+            made on the internet
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <p>
+        thanks for visiting my little
+        piece of the internet 🌎
+      </p>
+
+    </div>
+
+
+
+    <div class="footer-nav">
+
+      <a href="#top">
+        home
+      </a>
+
+      <a href="#about">
+        about
+      </a>
+
+      <a href="#projects">
+        projects
+      </a>
+
+      <a href="#links">
+        links
+      </a>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span> yourr-ikyy
+      </span>
+
+      <span>
+        built with HTML • CSS • JS
+      </span>
+
+      <span>
+        somewhere on earth 🌎
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+</footer>
+
+
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   YOURR-IKYY
+   INTERNET CORNER JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+const yearElement =
+  document.getElementById("year");
+
+if (yearElement) {
+
+  yearElement.textContent =
+    new Date().getFullYear();
+
+}
+
+
+
+/* =========================================================
+   RANDOM BUTTON
+========================================================= */
+
+const randomButton =
+  document.getElementById("randomButton");
+
+const randomMessage =
+  document.getElementById("randomMessage");
+
+
+const randomMessages = [
+
+  "you pressed it anyway 💀",
+
+  "i literally told you not to.",
+
+  "congratulations. absolutely nothing happened.",
+
+  "the website has gained +1 useless feature.",
+
+  "your curiosity has been documented.",
+
+  "somewhere, a div just moved.",
+
+  "CSS has been notified.",
+
+  "this button has absolutely no purpose.",
+
+  "you found the forbidden button ✦",
+
+  "okay. now go look at the projects.",
+
+  "the ocean footer knows what you did.",
+
+  "achievement unlocked: pressing things.",
+
+  "404: useful button not found."
+
+];
+
+
+if (
+  randomButton &&
+  randomMessage
+) {
+
+  randomButton.addEventListener(
+    "click",
+    () => {
+
+      const index =
+        Math.floor(
+          Math.random() *
+          randomMessages.length
+        );
+
+
+      randomMessage.textContent =
+        randomMessages[index];
+
+
+      randomButton.animate(
+
+        [
+          {
+            transform:
+              "scale(1) rotate(0deg)"
+          },
+
+          {
+            transform:
+              "scale(.92) rotate(-2deg)"
+          },
+
+          {
+            transform:
+              "scale(1.04) rotate(2deg)"
+          },
+
+          {
+            transform:
+              "scale(1) rotate(0deg)"
+          }
+        ],
+
+        {
+          duration:
+            350,
+
+          easing:
+            "ease-out"
+        }
+
+      );
+
+    }
+
+  );
+
+}
+
+
+
+/* =========================================================
+   HEADER ACTIVE NAV
+========================================================= */
+
+const navLinks =
+  document.querySelectorAll(
+    ".nav-link"
+  );
+
+
+const sections =
+  document.querySelectorAll(
+    "main section[id]"
+  );
+
+
+if (
+  navLinks.length &&
+  sections.length
+) {
+
+  const sectionObserver =
+    new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(
+          entry => {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              navLinks.forEach(
+                link => {
+
+                  link.classList.remove(
+                    "active"
+                  );
+
+                }
+              );
+
+
+              const activeLink =
+                document.querySelector(
+                  `.nav-link[href="#${entry.target.id}"]`
+                );
+
+
+              if (activeLink) {
+
+                activeLink.classList.add(
+                  "active"
+                );
+
+              }
+
+            }
+
+          }
+        );
+
+      },
+
+      {
+        rootMargin:
+          "-35% 0px -55% 0px"
+      }
+
+    );
+
+
+  sections.forEach(
+    section => {
+
+      sectionObserver.observe(
+        section
+      );
+
+    }
+  );
+
+}
+
+
+
+/* =========================================================
+   SMOOTH BUTTON PRESS EFFECT
+========================================================= */
+
+const interactiveButtons =
+  document.querySelectorAll(
+    ".aero-button, .small-aero-button, .social-tile, .nav-link"
+  );
+
+
+interactiveButtons.forEach(
+  element => {
+
+    element.addEventListener(
+      "click",
+      () => {
+
+        element.animate(
+
+          [
+            {
+              filter:
+                "brightness(1)"
+            },
+
+            {
+              filter:
+                "brightness(1.15)"
+            },
+
+            {
+              filter:
+                "brightness(1)"
+            }
+
+          ],
+
+          {
+            duration:
+              220
+          }
+
+        );
+
+      }
+
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+  document.querySelectorAll(
+    `
+      .quick-bar,
+      .large-panel,
+      .facts-card,
+      .identity-card,
+      .what-card,
+      .tool-card,
+      .project-item,
+      .social-tile,
+      .stats-strip,
+      .random-zone
+    `
+  );
+
+
+revealElements.forEach(
+  element => {
+
+    element.classList.add(
+      "js-reveal"
+    );
+
+  }
+);
+
+
+const revealObserver =
+  new IntersectionObserver(
+
+    entries => {
+
+      entries.forEach(
+        entry => {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target.classList.add(
+              "is-visible"
+            );
+
+
+            revealObserver.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+
+    {
+      threshold:
+        .08
+    }
+
+  );
+
+
+revealElements.forEach(
+  element => {
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   MOUSE PARALLAX
+========================================================= */
+
+const backgroundClouds =
+  document.querySelectorAll(
+    ".bg-cloud"
+  );
+
+
+const backgroundSpecks =
+  document.querySelectorAll(
+    ".sky-speck"
+  );
+
+
+window.addEventListener(
+  "mousemove",
+  event => {
+
+    const mouseX =
+      (
+        event.clientX /
+        window.innerWidth
+      ) - .5;
+
+
+    const mouseY =
+      (
+        event.clientY /
+        window.innerHeight
+      ) - .5;
+
+
+    backgroundClouds.forEach(
+      (cloud, index) => {
+
+        const intensity =
+          (index + 1) * 7;
+
+
+        cloud.style.translate =
+          `${mouseX * intensity}px ${mouseY * intensity}px`;
+
+      }
+    );
+
+
+    backgroundSpecks.forEach(
+      (speck, index) => {
+
+        const intensity =
+          (index + 1) * 4;
+
+
+        speck.style.translate =
+          `${mouseX * intensity}px ${mouseY * intensity}px`;
+
+      }
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   PROFILE WINDOW BUTTONS
+========================================================= */
+
+const windowControls =
+  document.querySelectorAll(
+    ".window-controls button"
+  );
+
+
+const profileWindow =
+  document.querySelector(
+    ".profile-window"
+  );
+
+
+if (
+  windowControls.length &&
+  profileWindow
+) {
+
+  windowControls[0].addEventListener(
+    "click",
+    () => {
+
+      profileWindow.animate(
+
+        [
+          {
+            opacity:
+              1
+          },
+
+          {
+            opacity:
+              .45
+          },
+
+          {
+            opacity:
+              1
+          }
+
+        ],
+
+        {
+          duration:
+            350
+        }
+
+      );
+
+    }
+  );
+
+
+  windowControls[1].addEventListener(
+    "click",
+    () => {
+
+      profileWindow.classList.toggle(
+        "window-expanded"
+      );
+
+
+      profileWindow.animate(
+
+        [
+          {
+            transform:
+              "scale(1)"
+          },
+
+          {
+            transform:
+              "scale(1.03)"
+          },
+
+          {
+            transform:
+              "scale(1)"
+          }
+
+        ],
+
+        {
+          duration:
+            250
+        }
+
+      );
+
+    }
+  );
+
+
+  windowControls[2].addEventListener(
+    "click",
+    () => {
+
+      profileWindow.animate(
+
+        [
+          {
+            transform:
+              "rotate(2deg) scale(1)"
+          },
+
+          {
+            transform:
+              "rotate(-2deg) scale(.97)"
+          },
+
+          {
+            transform:
+              "rotate(2deg) scale(1)"
+          }
+
+        ],
+
+        {
+          duration:
+            300
+        }
+
+      );
+
+    }
+  );
+
+}
+
+
+
+/* =========================================================
+   TOOL COUNTER
+========================================================= */
+
+const toolCards =
+  document.querySelectorAll(
+    ".tool-card"
+  );
+
+
+const toolCounter =
+  document.getElementById(
+    "toolCounter"
+  );
+
+
+if (toolCounter) {
+
+  toolCounter.textContent =
+    toolCards.length;
+
+}
+
+
+
+/* =========================================================
+   PROJECT TILT
+========================================================= */
+
+const projectCards =
+  document.querySelectorAll(
+    ".project-item"
+  );
+
+
+projectCards.forEach(
+  card => {
+
+    card.addEventListener(
+      "mousemove",
+      event => {
+
+        const rect =
+          card.getBoundingClientRect();
+
+
+        const x =
+          event.clientX -
+          rect.left;
+
+
+        const y =
+          event.clientY -
+          rect.top;
+
+
+        const rotateY =
+          ((x / rect.width) - .5) * 2;
+
+
+        const rotateX =
+          ((y / rect.height) - .5) * -2;
+
+
+        card.style.transform =
+          `
+            translateY(-5px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+          `;
+
+      }
+    );
+
+
+    card.addEventListener(
+      "mouseleave",
+      () => {
+
+        card.style.transform =
+          "";
+
+      }
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   OCEAN BUBBLE INTERACTION
+========================================================= */
+
+const oceanBubbles =
+  document.querySelectorAll(
+    ".ocean-bubble"
+  );
+
+
+oceanBubbles.forEach(
+  bubble => {
+
+    bubble.addEventListener(
+      "mouseenter",
+      () => {
+
+        bubble.animate(
+
+          [
+            {
+              scale:
+                "1"
+            },
+
+            {
+              scale:
+                "1.5"
+            },
+
+            {
+              scale:
+                "1"
+            }
+
+          ],
+
+          {
+            duration:
+              400
+          }
+
+        );
+
+      }
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   RANDOM CONSOLE MESSAGE
+========================================================= */
+
+console.log(
+  `
+╔══════════════════════════════════════╗
+║        YOURR-IKYY INTERNET CORNER   ║
+╠══════════════════════════════════════╣
+║                                      ║
+║  hello, developer 👋                ║
+║                                      ║
+║  you opened the console.             ║
+║  suspicious.                         ║
+║                                      ║
+║  anyway...                           ║
+║                                      ║
+║  keep building cool stuff.           ║
+║                                      ║
+╚══════════════════════════════════════╝
+  `
+);
+
+</script>
+
+</body>
+
+</html>
